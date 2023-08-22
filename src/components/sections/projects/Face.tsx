@@ -16,9 +16,9 @@ export const Face = () => {
             <button onClick={()=>{currentimg!=1 && setcurretimg(currentimg-1)}} className="md:hidden absolute top-[-1%] z-20 w-[250px] bg-gray-500/80 flex justify-center"><AiOutlineUpSquare size={50}/></button>
             {showimg.map((id, index) => (
               currentimg!=1?
-              index==1? <a href={`public/src/img/temp/face/${id}.jpg`} target="_blank" className="z-10"><img src={`public/src/img/temp/face/${id}.jpg`} alt="" className={`duration-300 scale-100 md:scale-150 z-10 w-[250px] h-[250px]`} key={id}/></a> : <img src={`public/src/img/temp/face/${id}.jpg`} alt="" className={`duration-300 scale-100 w-[250px] h-[250px] max-md:hidden`} key={id}/>
+              index==1? <a href={`public/src/img/temp/face/${id}.JPG`} target="_blank" className="z-10"><img src={`public/src/img/temp/face/${id}.JPG`} alt="" className={`duration-300 scale-100 md:scale-150 z-10 w-[250px] h-[250px]`} key={id}/></a> : <img src={`public/src/img/temp/face/${id}.JPG`} alt="" className={`duration-300 scale-100 w-[250px] h-[250px] max-md:hidden`} key={id}/>
               :
-              index==0? <a href={`public/src/img/temp/face/${id}.jpg`} target="_blank" className="z-10"><img src={`public/src/img/temp/face/${id}.jpg`} alt="" className={`duration-300 scale-100 md:scale-150 z-10 w-[250px] h-[250px]`} key={id}/></a> : <img src={`public/src/img/temp/face/${id}.jpg`} alt="" className={`duration-300 scale-100 w-[250px] h-[250px] max-md:hidden`} key={id}/>
+              index==0? <a href={`public/src/img/temp/face/${id}.JPG`} target="_blank" className="z-10"><img src={`public/src/img/temp/face/${id}.JPG`} alt="" className={`duration-300 scale-100 md:scale-150 z-10 w-[250px] h-[250px]`} key={id}/></a> : <img src={`public/src/img/temp/face/${id}.JPG`} alt="" className={`duration-300 scale-100 w-[250px] h-[250px] max-md:hidden`} key={id}/>
             ))}
             <button onClick={()=>{currentimg!=totalimg-1 && setcurretimg(currentimg+1)}} className="max-md:hidden h-[250px] bg-gray-500/80 absolute right-0"><AiOutlineRightSquare size={50}/></button>
             <button onClick={()=>{currentimg!=totalimg-1 && setcurretimg(currentimg+1)}} className="md:hidden absolute bottom-0 z-10 w-[250px] bg-gray-500/80 flex justify-center"><AiOutlineDownSquare size={50}/></button>
