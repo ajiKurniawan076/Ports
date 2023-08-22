@@ -75,7 +75,7 @@ export const Port = () => {
                                 </div>
                                 <div className="h-[300px] bg-white/70 w-[250px] rounded-xl hover:scale-125 duration-500 flex-col" onClick={() => { setproject(4) }}>
                                     <h5 className="text-center">Forecasting Web-app</h5>
-                                    <img src="" alt="Project Thumbnail" className="w-full h-[175px]" />
+                                    <img src=".\src\img\temp\POS\1.JPG" alt="Project Thumbnail" className="w-full h-[175px]" />
                                     <div className="px-3">
                                         <h6>Programming Language</h6>
                                         <p className="text-xs">Java & HTML</p>
