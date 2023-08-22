@@ -1,7 +1,6 @@
 import { useContext, useState } from "react"
 import { Portopage } from "../../App"
 import { AiOutlineCloseSquare } from "react-icons/ai"
-import { Template } from "./projects/Template"
 import { Pos } from "./projects/Pos"
 import { Face } from "./projects/Face"
 import { Posfront } from "./projects/Posfront"
@@ -46,7 +45,7 @@ export const Port = () => {
                             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 place-items-center mt-3">
                                 <div className="h-[300px] bg-white/70 w-[250px] rounded-xl hover:scale-125 duration-500 flex-col" onClick={() => { setproject(1) }}>
                                     <h5 className="text-center">Point Of Sales APP - Fullstack</h5>
-                                    <img src="./src/img/temp/pos/1.jpg" alt="Project Thumbnail" className="w-full h-[175px]" />
+                                    <img src="public\src\img\temp\pos\1.jpg" alt="Project Thumbnail" className="w-full h-[175px]" />
                                     <div className="px-3">
                                         <h6>Programming Language</h6>
                                         <p className="text-xs">PHP 8</p>
@@ -56,7 +55,7 @@ export const Port = () => {
                                 </div>
                                 <div className="h-[300px] bg-white/70 w-[250px] rounded-xl hover:scale-125 duration-500 flex-col" onClick={() => { setproject(2) }}>
                                     <h5 className="text-center">Point Of Sales APP - Frontend</h5>
-                                    <img src="./src/img/temp/pos front/1.jpg" alt="Project Thumbnail" className="w-full h-[175px]" />
+                                    <img src="public/src/img/temp/pos front/1.jpg" alt="Project Thumbnail" className="w-full h-[175px]" />
                                     <div className="px-3">
                                         <h6>Programming Language</h6>
                                         <p className="text-xs">Javascript</p>
@@ -66,7 +65,7 @@ export const Port = () => {
                                 </div>
                                 <div className="h-[300px] bg-white/70 w-[250px] rounded-xl hover:scale-125 duration-500 flex-col" onClick={() => { setproject(3) }}>
                                     <h5 className="text-center">Face Recognition Web-App</h5>
-                                    <img src="./src/img/temp/face/1.jpg" alt="Project Thumbnail" className="w-full h-[175px]" />
+                                    <img src="public/src/img/temp/face/1.jpg" alt="Project Thumbnail" className="w-full h-[175px]" />
                                     <div className="px-3">
                                         <h6>Programming Language</h6>
                                         <p className="text-xs">PHP 8</p>
