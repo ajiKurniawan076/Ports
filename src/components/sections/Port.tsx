@@ -65,7 +65,7 @@ export const Port = () => {
                                 </div>
                                 <div className="h-[300px] bg-white/70 w-[250px] rounded-xl hover:scale-125 duration-500 flex-col" onClick={() => { setproject(3) }}>
                                     <h5 className="text-center">Face Recognition Web-App</h5>
-                                    <img src=".\src\img\temp\face\1.jpg" alt="Project Thumbnail" className="w-full h-[175px]" />
+                                    <img src=".\src\img\logo.png" alt="Project Thumbnail" className="w-full h-[175px]" />
                                     <div className="px-3">
                                         <h6>Programming Language</h6>
                                         <p className="text-xs">PHP 8</p>
