@@ -1,7 +1,6 @@
 import { useContext, useState } from "react"
 import { Portopage } from "../../App"
 import { AiOutlineCloseSquare } from "react-icons/ai"
-import { Template } from "./projects/Template"
 import { Pos } from "./projects/Pos"
 import { Face } from "./projects/Face"
 import { Posfront } from "./projects/Posfront"
