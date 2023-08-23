@@ -9,9 +9,9 @@ export const About = () => {
   setpage('ABOUT')
   },[])
 
-  return (
-    <div className={`flex w-full mt-5 ${rendered?'bg-black/30 scake-100':'scale-[10%] bg-transparent'} sm:h-[400px] rounded-3xl duration-300`}>
-      <div className="p-10 text-white/80 w-4/5 bg-black/30 overflow-auto rounded-s-3xl">
+  return ( 
+    <div className={`flex w-full mt-5 ${rendered?'bg-black/30 scake-100':'scale-[10%] bg-transparent'} sm:h-[400px] rounded-3xl duration-300 overflow-auto`}>
+      <div className="p-10 text-white/80 w-4/5 bg-black/30 rounded-s-3xl h-full overflow-auto">
         <h3 className="">Hello</h3> 
         <div className="mt-3 p-4 text-sm font-semibold">My Name is Aji Kurniawan,
         <br/> I was born in Salatiga in 24th February 1996
