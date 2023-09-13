@@ -3,15 +3,15 @@ import { Pages } from "../../App"
 
 export const About = () => {
   const [rendered, setrender] = useState(false)
-  const {setpage} = useContext(Pages)
+  const {setpage, dark} = useContext(Pages)
   useEffect(()=>{setrender(true)
   //console.log('rendered')
   setpage('ABOUT')
   },[])
 
   return ( 
-    <div className={`flex w-full mt-5 ${rendered?'bg-black/30 scake-100':'scale-[10%] bg-transparent'} sm:h-[400px] rounded-3xl duration-300 overflow-auto`}>
-      <div className="p-10 text-white/80 w-full md:w-4/5 bg-black/30 rounded-s-3xl h-full overflow-auto">
+    <div className={`flex w-full mt-5 ${rendered?` bg-black/30 scale-100  ${dark?'bg-white':''}`:'scale-[10%] bg-transparent'} sm:h-[400px] rounded-3xl duration-300 overflow-auto`}>
+      <div className={`p-10 ${dark? 'text-black/80':'text-white/80'} w-full md:w-4/5 bg-black/30 rounded-s-3xl h-full overflow-auto`}>
         
         <div className="flex justify-center w-full md:hidden">
         <img src="./src/img/oni.jpg" alt="My Profil Image" className="group w-[150px] h-[150px] rounded-full hover:scale-150 duration-300"></img>
@@ -42,9 +42,9 @@ export const About = () => {
         </div>
         </div>
       </div>
-      <div className="mt-10 relative group w-1/5 justify-center h-fit hidden md:flex">
-        <img src="./src/img/oni.jpg" alt="My Profil Image" className="group w-[100px] h-[100px] md:w-[200px] md:h-[200px] rounded-full hover:scale-150 duration-300"></img>
-        <p className="absolute bottom-[-75px] md:bottom-[-90px] scale-0 group-hover:scale-100 bg-yellow-300/40 duration-300 rounded-lg p-2">Aji Kurniawan</p>
+      <div className="relative group w-1/5 justify-center h-full hidden md:flex bg-black/30">
+        <img src="./src/img/oni.jpg" alt="My Profil Image" className="group w-[100px] h-[100px] md:w-[200px] md:h-[200px] rounded-full hover:scale-150 duration-300 my-auto"></img>
+        <p className="absolute bottom-[-75px] md:bottom-[90px] scale-0 group-hover:scale-100 bg-yellow-300/80 font-bold duration-300 rounded-lg p-2">Aji Kurniawan</p>
       </div>
     </div>
 

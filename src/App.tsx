@@ -14,10 +14,11 @@ export const Portopage = createContext<any>(null)
 function App() {
   const [page, setpage] = useState<String|null>(null)
   const [port, setport] = useState(false)
+  const [dark, setdark] = useState(false)
   return (
     <BrowserRouter>
-    <Pages.Provider value={{page, setpage}}>
-    <div className='h-screen w-screen px-2 flex flex-col'>
+    <Pages.Provider value={{page, setpage, dark, setdark}}>
+    <div className={`h-screen w-screen px-2 flex flex-col duration-500 ${dark?' bg-black ':''}`}>
     <Portopage.Provider value={{port,setport}}>
     <Navbar/>
     <Port/>
