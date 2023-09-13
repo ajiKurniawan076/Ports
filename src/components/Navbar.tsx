@@ -30,7 +30,7 @@ export const Navbar = () => {
         </div>
         <div className={"md:flex items-start justify-center w-full" +
           (navopen ? "flex flex-grow " : " hidden ")}>
-          <nav className={`flex flex-col border-black/60 md:flex-row max-md:fixed top-[75px] bg-utama max-md:z-20 left-0 justify-start w-full mt-3 max-md:border-4 md:justify-center ${dark?' dark bg-white/90 text-black ':null}`} onClick={()=>{setnavopen(false)}}>
+          <nav className={`flex flex-col border-black/60 md:flex-row max-md:fixed top-[75px] bg-utama max-md:z-20 left-0 justify-start w-full mt-3 max-md:border-4 md:justify-center ${dark?' dark bg-white/90 max-md:text-black ':null}`} onClick={()=>{setnavopen(false)}}>
 
             <NavLink to='' className="font-semibold sm:text-2xl flex justify-center items-end w-full md:w-[120px]"><p className="md:fixed md:top-[79px] h-[50px] w-full md:w-[120px] text-center md:rounded-t-lg duration-300">Home</p></NavLink>
             <NavLink to='about' className="font-semibold sm:text-2xl flex justify-center items-end w-full md:w-[120px]"><p className="md:fixed md:top-[79px] h-[50px] w-full md:w-[120px] text-center md:rounded-t-lg duration-300">About Me</p></NavLink>
