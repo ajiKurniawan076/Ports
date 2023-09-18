@@ -20,7 +20,7 @@ export const About = () => {
         <div className="mt-3 p-4 text-sm font-semibold text-center">My Name is Aji Kurniawan,
         <br/> I was born in Salatiga in 24th February 1996
         <br />I've been living in my hometown since i was kid until i graduated from my University at Satya Wacana Christian University in 24th February 2023
-        <br /><br />I got Bachelor Degree in Informatic Engineering with Application Developer as my classification. I focused my study in website and desktop application development.
+        <br /><br />I got Bachelor Degree in Informatic Engineering with Application Developer as my classification. I've been focusing my study in website and desktop application development.
         <br />So, these are the programming language and framework that i've learnt so far:
         <br />
         <div className="flex max-md:flex-col gap-10 justify-between mt-10 text-start">
