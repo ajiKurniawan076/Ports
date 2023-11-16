@@ -38,6 +38,7 @@ export const About = () => {
 
         <ul className="w-1/2">Website Back End
           <li className=" list-disc">Java Springboot</li>
+          <li className=" list-disc">GOLang</li>
         </ul>
         </div>
         </div>
