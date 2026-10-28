@@ -145,7 +145,7 @@ I was born in Salatiga in 24th February 1996</p>
         </div>
         <div id='kontak' className='scroll-mt-15 md:scroll-mt-30 grid lg:flex w-full h-fit text-white font-serif bg-[url("../assets/contact.jpg")] bg-cover bg-center'>
           <div className='lg:w-[25%] flex flex-col p-2 bg-white lg:pt-20'>
-            <h1 className='lg:text-right text-teal-950'>Contact <span className='lg:hidden'>Us</span></h1>
+            <h1 className='lg:text-right text-teal-950'>Contact <span className='lg:hidden'>Me</span></h1>
             <div className='h-full bg-linear-to-b/oklch from-[#324e51] to-[#3d676b] rounded-3xl mx-2.5 my-5 flex flex-col p-3 text-amber-100'>
               <h4>Aji Kurniawan, S.Kom</h4>
               <div className='flex items-center gap-8 p-4 my-4'>
