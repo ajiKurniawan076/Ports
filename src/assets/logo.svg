@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+
+<defs>
+
+<linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FFF2A8"/>
+    <stop offset="25%" stop-color="#FFD45B"/>
+    <stop offset="50%" stop-color="#D9A72B"/>
+    <stop offset="75%" stop-color="#B57C12"/>
+    <stop offset="100%" stop-color="#FFE38A"/>
+</linearGradient>
+
+<linearGradient id="silver" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="50%" stop-color="#D7D7D7"/>
+    <stop offset="100%" stop-color="#AFAFAF"/>
+</linearGradient>
+
+<radialGradient id="bg" cx="50%" cy="35%">
+    <stop offset="0%" stop-color="#162742"/>
+    <stop offset="100%" stop-color="#061120"/>
+</radialGradient>
+
+<filter id="shadow">
+    <feDropShadow dx="0" dy="6" stdDeviation="8"
+        flood-color="#000"
+        flood-opacity=".45"/>
+</filter>
+
+<!-- MASK UNTUK MEMOTONG HURUF -->
+<mask id="arrowMask">
+
+    <!-- tampil semua -->
+    <rect width="800" height="800" fill="white"/>
+
+    <!-- jalur panah dihilangkan -->
+    <path
+        d="M300 545
+           C325 460 410 395 555 340"
+        fill="none"
+        stroke="black"
+        stroke-width="40"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <!-- kepala panah -->
+    <polygon
+fill="black"
+points="
+542,318
+588,325
+563,363"/>
+
+</mask>
+
+</defs>
+
+<!-- SHIELD -->
+
+<path
+d="
+M400 40
+C540 40 650 105 650 105
+L650 370
+C650 555 540 685 400 750
+C260 685 150 555 150 370
+L150 105
+C150 105 260 40 400 40Z"
+fill="url(#bg)"
+stroke="url(#gold)"
+stroke-width="12"/>
+
+<!-- HURUF YANG DIPOTONG MASK -->
+
+<g filter="url(#shadow)" mask="url(#arrowMask)">
+
+    <!-- T -->
+    <path
+        fill="url(#gold)"
+        d="
+        M235 170
+        H610
+        V235
+        H415
+        V600
+        H345
+        V235
+        H235
+        Z"/>
+
+    <!-- F -->
+    <path
+fill="url(#silver)"
+d="
+M430 255
+H600
+V305
+H490
+V375
+H570
+V425
+H490
+V620
+H430
+Z"/>
+
+</g>
+
+<!-- PANAH DI ATAS -->
+
+<path
+d="
+M300 545
+C325 460 410 395 555 340"
+fill="none"
+stroke="url(#gold)"
+stroke-width="17"
+stroke-linecap="round"
+stroke-linejoin="round"/>
+
+<polygon
+fill="url(#gold)"
+points="
+542,318
+588,325
+563,363"/>
+
+</svg>
