@@ -10,6 +10,7 @@ import { Footer } from '../elements/Footer'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel"
 import { FaArrowCircleRight, FaBookOpen, FaFacebook, FaFirstOrder, FaGoogle, FaInstagram, FaMailBulk, FaMapMarkedAlt, FaPeopleCarry, FaPhone, FaServicestack, FaShippingFast, FaSmile, FaUserAlt, FaUserAstronaut, FaUserCheck, FaUserCircle, FaUserTag, FaWhatsapp } from 'react-icons/fa'
+import Typewriter from '../effects/Typewriting'
 
 export const Home = () => {
   const navigate = useNavigate()
@@ -51,9 +52,9 @@ export const Home = () => {
               Software Developer & IT Professional
             </h1>
             <h4 className='text-sm md:text-xl lg:text-2xl max-w-200 font-normal'>
-             Welcome to my professional portfolio, where I showcase my technical expertise, development projects, and experience in building practical software solutions.
+             <Typewriter teks={[' Welcome to my professional portfolio, where I showcase my technical expertise, development projects, and experience in building practical software solutions.']}/>
              </h4>
-            <a href='#kontak' className=' bg-white flex gap-1 rounded-2xl w-32 md:w-44 items-center mt-10 p-2 border-2 border-green-500/50 hover:bg-gray-200 duration-300 text-green-500'><FaWhatsapp className='text-green-500' size={40} /> Contact Me</a>
+            <a href='#pesan' className=' bg-white flex gap-1 rounded-2xl w-32 md:w-44 items-center mt-10 p-2 border-2 border-green-500/50 hover:bg-gray-200 duration-300 text-green-500'><FaWhatsapp className='text-green-500' size={40} /> Contact Me</a>
             <div className='flex gap-8 border-t w-full p-2'>
               <div className='flex flex-col gap-3'>
                 <h2 className='text-lg text-amber-100 md:text-2xl lg:text-4xl'>S.Kom (UKSW)</h2>
@@ -115,9 +116,9 @@ export const Home = () => {
           <h4 className='text-amber-100'>About Me</h4>
           <h2 className=' font-normal' >Hello,</h2>
           <div className='grid  md:grid-cols-1 gap-4 place-items-center h-full p-2 mb-14'>
-            <div className='flex flex-col hover:text-amber-100 duration-200 border-t border-white/30 gap-2 text-s items-start font-normal p-4 w-full h-full text-justify'>
-              <p>My name is Aji Kurniawan, and I was born in Salatiga, Indonesia, on February 24, 1996. I hold a Bachelor’s degree in Informatics Engineering from Satya Wacana Christian University (UKSW), where I developed a strong foundation in software engineering, programming, and application development, particularly for web and desktop platforms. I have a strong interest in software development and enjoy building practical, reliable, and user-oriented applications.</p>
-              <p>Outside of software development, I enjoy staying active through sports such as soccer, badminton, basketball, and volleyball. I also enjoy playing the guitar as a way to express my creativity and pursue my interest in music. Living with Ankylosing Spondylitis has presented challenges to my mobility and daily activities, but it has also become part of my personal journey. I appreciate understanding and patience when physical stiffness occasionally affects my movement or posture.</p>
+            <div className='flex flex-col hover:text-amber-100 duration-200 border-t border-white/30 gap-2 text-s items-start font-normal p-2 sm:p-4 w-full h-full text-justify space-y-2'>
+              <p className='indent-8'>My name is Aji Kurniawan, and I was born in Salatiga, Indonesia, on February 24, 1996. I hold a Bachelor’s degree in Informatics Engineering from Satya Wacana Christian University (UKSW), where I developed a strong foundation in software engineering, programming, and application development, particularly for web and desktop platforms. I have a strong interest in software development and enjoy building practical, reliable, and user-oriented applications.</p>
+              <p className='indent-8'>Outside of software development, I enjoy staying active through sports such as soccer, badminton, basketball, and volleyball. I also enjoy playing the guitar as a way to express my creativity and pursue my interest in music. Living with Ankylosing Spondylitis has presented challenges to my mobility and daily activities, but it has also become part of my personal journey. I appreciate understanding and patience when physical stiffness occasionally affects my movement or posture.</p>
             </div>
           </div>
 
@@ -148,7 +149,7 @@ export const Home = () => {
           <div className='lg:w-[70%] flex flex-col gap-1 p-2 text-teal-950 font-bold bg-teal-950/50'>
             <h1 className='text-left text-amber-100 my-18 hidden lg:block'>Me</h1>
 
-            <form className='h-full rounded-3xl mx-2.5 p-6 flex flex-col gap-4'>
+            <form id='pesan' className='scroll-mt-25 md:scroll-mt-30 h-full rounded-3xl mx-2.5 p-6 flex flex-col gap-4'>
               <h3 className='text-left text-amber-100'>
                 Send Me A Massage
               </h3>
