@@ -53,7 +53,7 @@ export const Home = () => {
             <h4 className='text-sm md:text-xl lg:text-2xl max-w-200 font-normal'>
               I'd like to share all about me in this site. So, welcome to my home <FaSmile className='text-yellow-300 mt-2 w-20 h-20'/>
             </h4>
-            <a href='#kontak' className=' bg-white flex gap-1 rounded-2xl w-32 md:w-44 items-center mt-10 p-2 border-2 border-green-500/50 hover:bg-gray-200 duration-300 text-green-500'><FaWhatsapp className='text-green-500' size={40} /> Hubungi Saya</a>
+            <a href='#kontak' className=' bg-white flex gap-1 rounded-2xl w-32 md:w-44 items-center mt-10 p-2 border-2 border-green-500/50 hover:bg-gray-200 duration-300 text-green-500'><FaWhatsapp className='text-green-500' size={40} /> Contact Me</a>
             <div className='flex gap-8 border-t w-full p-2'>
               <div className='flex flex-col gap-3'>
                 <h2 className='text-lg text-amber-100 md:text-2xl lg:text-4xl'>S.Kom (UKSW)</h2>
