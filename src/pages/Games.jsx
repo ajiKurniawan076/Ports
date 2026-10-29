@@ -64,7 +64,7 @@
                     }}
                     onClick={shoot}
                     >
-                    <FaSpider style={{
+                    <FaSpider className={`${score===20&&'animate-ping fixed left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2'}`} style={{
                         height: `${Osize}px`,
                         width: `${Osize}px`,
                     }} />
