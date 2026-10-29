@@ -45,14 +45,14 @@ export const Home = () => {
           </Carousel>
           <div className='w-full h-full absolute top-0 left-0 flex flex-col gap-4 justify-center items-start text-white font-extrabold bg-teal-950/80 text-left px-[5%]'>
             <h4 className='text-base md:text-xl lg:text-2xl text-amber-100'>
-              Welcome To My Page Pals
+              Welcome to My Portfolio
             </h4>
             <h1 className='text-lg md:text-3xl lg:text-5xl max-w-200'>
-              This is My Portofolio page that contains my personal information.
+              Software Developer & IT Professional
             </h1>
             <h4 className='text-sm md:text-xl lg:text-2xl max-w-200 font-normal'>
-              I'd like to share all about me in this site. So, welcome to my home <FaSmile className='text-yellow-300 mt-2 w-20 h-20'/>
-            </h4>
+             Welcome to my professional portfolio, where I showcase my technical expertise, development projects, and experience in building practical software solutions.
+             </h4>
             <a href='#kontak' className=' bg-white flex gap-1 rounded-2xl w-32 md:w-44 items-center mt-10 p-2 border-2 border-green-500/50 hover:bg-gray-200 duration-300 text-green-500'><FaWhatsapp className='text-green-500' size={40} /> Contact Me</a>
             <div className='flex gap-8 border-t w-full p-2'>
               <div className='flex flex-col gap-3'>
@@ -75,37 +75,36 @@ export const Home = () => {
 
         <div id='service' className='scroll-mt-15 md:scroll-mt-30 w-full px-[12.5%] bg-white justify-self-center p-2 py-12 flex flex-col gap-2 justify-center items-start text-teal-950/80'>
           <h4  className='text-teal-600'>Skills</h4>
-          <h4 className=' font-normal' >I've been focusing my study in website and desktop application development.
-So, these are the programming language and framework that i've learnt so far:</h4>
+          <h4 className=' font-normal' >I specialize in web and desktop application development, with a focus on building functional, reliable, and user-oriented software solutions. Below are the programming languages, frameworks, and technologies I have learned and applied throughout my development journey.</h4>
           <div className='grid  md:grid-cols-3 gap-20 place-items-center h-full p-2 mb-14 w-full'>
             <div className='flex  flex-col bg-teal-950/20 rounded-lg hover:scale-105 duration-200 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4>React JS</h4>
-              <p>My Bestie in frontend development is React JS. It's easy to implement my idea into codes using React JS</p>
+              <p>React.js is my primary choice for frontend development. Its component-based architecture and flexibility allow me to translate ideas into functional, interactive, and maintainable user interfaces efficiently.</p>
               <p className='self-center mt-auto'>1</p>
             </div>
             <div className='flex  flex-col bg-teal-950/20 rounded-lg hover:scale-105 duration-200 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4>Express JS</h4>
-              <p>Not the best one, but Express JS matches with my preference of using React as my frontend framework</p>
+              <p>Express.js is my preferred backend framework, particularly when working with React.js for frontend development. Its simplicity and flexibility make it well suited for building RESTful APIs and integrating backend services with React-based applications.</p>
               <p className='self-center mt-auto'>2</p>
             </div>
             <div className='flex  flex-col bg-teal-950/20 rounded-lg hover:scale-105 duration-200 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4>MongoDB</h4>
-              <p>I need JSON, MongoDB would be there for me</p>
+              <p>MongoDB is my preferred NoSQL database for handling JSON-like data. Its flexible document-based structure makes it a practical choice for storing, managing, and retrieving application data, particularly in projects built with Express.js and React.js.</p>
               <p className='self-center mt-auto'>3</p>
             </div>
             <div className='flex  flex-col bg-teal-950/20 rounded-lg hover:scale-105 duration-200 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4>Laravel</h4>
-              <p>My first love as a fullstack developer is Laravel. Easy implementations of frontend X backend integration. I'd like to use laravel if i have a chance to use it</p>
+              <p>Laravel was my first choice for full-stack development. Its integrated architecture simplifies frontend and backend development, enabling efficient implementation of application features. I would welcome the opportunity to work with Laravel again and further develop my expertise with the framework.</p>
               <p className='self-center mt-auto'>4</p>
             </div>
             <div className='flex  flex-col bg-teal-950/20 rounded-lg hover:scale-105 duration-200 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4>GoLang</h4>
-              <p>When i learnt Rest API for the first time, GoLang was there for me. The Structure was strong, but i prefered to learn Express at the end</p>
+              <p>Go was my introduction to REST API development. Its structured approach helped me understand backend architecture and API design. However, I ultimately gravitated toward Express.js because its flexibility and simplicity better align with my preferred development workflow.</p>
               <p className='self-center mt-auto'>5</p>
             </div>
             <div className='flex  flex-col bg-teal-950/20 rounded-lg hover:scale-105 duration-200 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4>MySQL</h4>
-              <p>Of course </p>
+              <p>MySQL is one of the relational database management systems I have learned. I use it to structure, store, and manage relational data, making it suitable for applications that require organized data relationships and reliable querying.</p>
               <p className='self-center mt-auto'>6</p>
             </div>
 
@@ -118,23 +117,22 @@ So, these are the programming language and framework that i've learnt so far:</h
           <div className='grid  md:grid-cols-4 gap-4 place-items-center h-full p-2 mb-14'>
             <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4 className='text-amber-100'>Me</h4>
-              <p>My Name is Aji Kurniawan,
-I was born in Salatiga in 24th February 1996</p>
+              <p>My name is Aji Kurniawan, and I was born in Salatiga, Indonesia, on February 24, 1996. I am an Informatics Engineering graduate with an interest in software development, particularly web and desktop applications.</p>
             </div>
 
             <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4 className='text-amber-100'>Education</h4>
-              <p>I got Bachelor Degree of Informatic Engineering in Satya Wacana Christian University (UKSW) with Application Developer as my classification. I've been focusing my study in website and desktop application development.</p>
+              <p>I hold a Bachelor’s degree in Informatics Engineering from Satya Wacana Christian University (UKSW), with a focus on application development. Throughout my studies, I concentrated on web and desktop application development, building a foundation in software engineering, programming, and application design.</p>
             </div>
 
             <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4 className='text-amber-100'>Hobbies</h4>
-              <p>I really love doing sports. Such as Soccer, Badminton, Basketball, Volleyball. Also in Music i love playing guitar</p>
+              <p>Outside of software development, I enjoy staying active through sports, including soccer, badminton, basketball, and volleyball. I also enjoy playing the guitar, which allows me to express my creativity and pursue my interest in music.</p>
             </div>
 
             <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4 className='text-amber-100'>Disability</h4>
-              <p>I'm diagnosed with Ankylosing Spondylitis in my 20's. So i can't do most of my hobbies now. If u find me not looking at u, it's just me being stiff. I'm So Sorry!!</p>
+              <p>Outside of software development, I enjoy staying active through sports, including soccer, badminton, basketball, and volleyball. I also enjoy playing the guitar, which allows me to express my creativity and pursue my interest in music.</p>
             </div>
           </div>
 
