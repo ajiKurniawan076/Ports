@@ -114,25 +114,10 @@ export const Home = () => {
         <div id='about' className='scroll-mt-15 md:scroll-mt-30 w-full px-[12.5%] bg-teal-950 justify-self-center p-2 py-16 flex flex-col gap-2 justify-center items-start text-white'>
           <h4 className='text-amber-100'>About Me</h4>
           <h2 className=' font-normal' >Hello,</h2>
-          <div className='grid  md:grid-cols-4 gap-4 place-items-center h-full p-2 mb-14'>
-            <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
-              <h4 className='text-amber-100'>Me</h4>
-              <p>My name is Aji Kurniawan, and I was born in Salatiga, Indonesia, on February 24, 1996. I am an Informatics Engineering graduate with an interest in software development, particularly web and desktop applications.</p>
-            </div>
-
-            <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
-              <h4 className='text-amber-100'>Education</h4>
-              <p>I hold a Bachelor’s degree in Informatics Engineering from Satya Wacana Christian University (UKSW), with a focus on application development. Throughout my studies, I concentrated on web and desktop application development, building a foundation in software engineering, programming, and application design.</p>
-            </div>
-
-            <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
-              <h4 className='text-amber-100'>Hobbies</h4>
-              <p>Outside of software development, I enjoy staying active through sports, including soccer, badminton, basketball, and volleyball. I also enjoy playing the guitar, which allows me to express my creativity and pursue my interest in music.</p>
-            </div>
-
-            <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
-              <h4 className='text-amber-100'>Disability</h4>
-              <p>Outside of software development, I enjoy staying active through sports, including soccer, badminton, basketball, and volleyball. I also enjoy playing the guitar, which allows me to express my creativity and pursue my interest in music.</p>
+          <div className='grid  md:grid-cols-1 gap-4 place-items-center h-full p-2 mb-14'>
+            <div className='flex flex-col duration-200 border-t border-white/30 gap-2 text-s items-start font-normal p-4 w-full h-full text-justify'>
+              <p>My name is Aji Kurniawan, and I was born in Salatiga, Indonesia, on February 24, 1996. I hold a Bachelor’s degree in Informatics Engineering from Satya Wacana Christian University (UKSW), where I developed a strong foundation in software engineering, programming, and application development, particularly for web and desktop platforms. I have a strong interest in software development and enjoy building practical, reliable, and user-oriented applications.</p>
+              <p>Outside of software development, I enjoy staying active through sports such as soccer, badminton, basketball, and volleyball. I also enjoy playing the guitar as a way to express my creativity and pursue my interest in music. Living with Ankylosing Spondylitis has presented challenges to my mobility and daily activities, but it has also become part of my personal journey. I appreciate understanding and patience when physical stiffness occasionally affects my movement or posture.</p>
             </div>
           </div>
 
