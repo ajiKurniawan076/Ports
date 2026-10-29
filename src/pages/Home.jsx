@@ -138,7 +138,7 @@ export const Home = () => {
 
         </div>
         <div id='kontak' className='scroll-mt-15 md:scroll-mt-30 grid lg:flex w-full h-fit text-white font-serif bg-[url("../assets/contact.jpg")] bg-cover bg-center'>
-          <div className='lg:w-[25%] flex flex-col p-2 bg-teal-950 bg-linear-to-bl from-teal-950 from-50% to-[#324e51] to-50% lg:pt-20'>
+          <div className='lg:w-[30%] flex flex-col p-2 bg-teal-950 bg-linear-to-bl from-teal-950 from-50% to-[#324e51] to-50% lg:pt-20'>
             <h1 className='lg:text-right text-amber-100'>Contact <span className='lg:hidden'>Me</span></h1>
             <div className='h-full rounded-3xl mx-2.5 my-5 flex flex-col p-3 text-amber-100'>
               <h4>Aji Kurniawan, S.Kom</h4>
@@ -160,7 +160,7 @@ export const Home = () => {
               </a>
             </div>
           </div>
-          <div className='lg:w-[65%] flex flex-col gap-1 p-2 text-teal-950 font-bold bg-teal-950/50'>
+          <div className='lg:w-[70%] flex flex-col gap-1 p-2 text-teal-950 font-bold bg-teal-950/50'>
             <h1 className='text-left text-amber-100 my-18 hidden lg:block'>Me</h1>
 
             <form className='h-full rounded-3xl mx-2.5 p-6 flex flex-col gap-4'>
