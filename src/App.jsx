@@ -13,6 +13,7 @@ import { Login } from './pages/Login'
 import { About } from './pages/About'
 import { Services } from './pages/Services'
 import { Contact } from './pages/Contact'
+import { Games } from './pages/Games'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
     <div id='root-container'>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/games" element={<Games />} />
     </Routes>
     </div>
   )
