@@ -120,25 +120,21 @@ So, these are the programming language and framework that i've learnt so far:</h
               <h4 className='text-amber-100'>Me</h4>
               <p>My Name is Aji Kurniawan,
 I was born in Salatiga in 24th February 1996</p>
-              <p className='self-center mt-auto'>1</p>
             </div>
 
             <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4 className='text-amber-100'>Education</h4>
               <p>I got Bachelor Degree of Informatic Engineering in Satya Wacana Christian University (UKSW) with Application Developer as my classification. I've been focusing my study in website and desktop application development.</p>
-              <p className='self-center mt-auto'>2</p>
             </div>
 
             <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4 className='text-amber-100'>Hobbies</h4>
               <p>I really love doing sports. Such as Soccer, Badminton, Basketball, Volleyball. Also in Music i love playing guitar</p>
-              <p className='self-center mt-auto'>3</p>
             </div>
 
             <div className='flex flex-col hover:scale-105 duration-200 border-t border-white/30 gap-2 text-s text-left items-start font-normal shadow-2xl p-4 w-full h-full'>
               <h4 className='text-amber-100'>Disability</h4>
               <p>I'm diagnosed with Ankylosing Spondylitis in my 20's. So i can't do most of my hobbies now. If u find me not looking at u, it's just me being stiff. I'm So Sorry!!</p>
-              <p className='self-center mt-auto'>4</p>
             </div>
           </div>
 

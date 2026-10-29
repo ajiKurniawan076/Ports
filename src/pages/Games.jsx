@@ -50,7 +50,7 @@
             <select name="game" id="game" className='p-2 rounded-lg'>
                 <option value="" disabled>Choose your game!</option>
                 <option value="bird">Shooting Spider</option>
-                <option value="bird" disabled>Janken : Coming soon)</option>
+                <option value="bird" disabled>Janken : Coming soon</option>
                 <option value="bird" disabled>Smile : Coming soon</option>
             </select>
             <div className='w-full h-full cursor-crosshair'>
