@@ -11,12 +11,12 @@
         const[Ospeed, setOspeed] = useState(3)
         const shoot = (e) => {
             e.preventDefault()
-            if(score<20){
+            if(score<19){
                 setVisible(false)
             setScore(score+1)
-                    const randomSize = Math.random()*30+30
+                    const randomSize = Math.random()*70+25
                     const randomSpeed = Math.random()*3+3
-                    const randomTop = Math.random()*70 + 20
+                    const randomTop = Math.random()*50 + 20
 
                     setOsize(randomSize)
                     setOtop(randomTop)
@@ -26,10 +26,11 @@
             setVisible(true)
         }, 1500)
         }
-        if (score===20){
+        if (score===19){
+            setScore(score+1)
             console.log("THE END")
-            setOsize(999)
             setOspeed(999)
+            setOsize(300)
         }
             
             
@@ -54,7 +55,7 @@
             </select>
             <div className='w-full h-full cursor-crosshair'>
                 <button
-                    className={`bird p-2 absolute ${
+                    className={`bird p-2 absolute  ${
                         visible ? 'opacity-100' : 'opacity-0'
                     } cursor-crosshair`}
                     style={{
@@ -63,7 +64,10 @@
                     }}
                     onClick={shoot}
                     >
-                    <FaSpider size={Osize} />
+                    <FaSpider style={{
+                        height: `${Osize}px`,
+                        width: `${Osize}px`,
+                    }} />
                 </button>
                 <style>{`
                     .bird {
