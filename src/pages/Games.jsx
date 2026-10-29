@@ -1,18 +1,81 @@
-import React from 'react'
+    import React, { useEffect, useState } from 'react'
+    import { FaSpider } from 'react-icons/fa'
 
-export const Games = () => {
-  return (
-    <div className='w-full h-full p-4 flex flex-col items-center justify-start'>
-        <p className='text-2xl font-bold'>            
-            GAMES
-        </p>
-        <select name="game" id="game" className='p-2 rounded-lg'>
-            <option value="" disabled>Choose your game!</option>
-            <option value="bird">Shooting Bird</option>
-            <option value="bird">Janken</option>
-            <option value="bird">Smile</option>
-        </select>
-        <div className='w-full h-full'></div>
-    </div>
-  )
-}
+    export const Games = () => {
+        const [score, setScore] = useState(0)
+        const [visible, setVisible] = useState(true)
+        const [quack, setQuack] = useState(false)
+        const[Osize, setOsize] = useState(30)
+        const[Oleft, setOleft] = useState(0)
+        const[Otop, setOtop] = useState(20)
+        const[Ospeed, setOspeed] = useState(3)
+        const shoot = (e) => {
+            e.preventDefault()
+            if(score<20){
+                setVisible(false)
+            setScore(score+1)
+                    const randomSize = Math.random()*30+30
+                    const randomSpeed = Math.random()*3+3
+                    const randomTop = Math.random()*70 + 20
+
+                    setOsize(randomSize)
+                    setOtop(randomTop)
+                    setOspeed(randomSpeed)
+                    setVisible(true)
+        setTimeout(()=>{
+            setVisible(true)
+        }, 1500)
+        }
+        if (score===20){
+            console.log("THE END")
+            setOsize(999)
+            setOspeed(999)
+        }
+            
+            
+        }
+    return (
+        <div className='w-full h-full p-4 flex flex-col items-center justify-start '>
+            <div className='fixed top-0 right-0 p-2 flex'>
+                <p>Your Score : </p>
+                <p>{score}</p>
+            </div>
+            <div className='fixed top-0 left-0 p-2 flex'>
+                <a href='/'>Back To My Page</a>
+            </div>
+            <p className='text-2xl font-bold'>            
+                GAMES
+            </p>
+            <select name="game" id="game" className='p-2 rounded-lg'>
+                <option value="" disabled>Choose your game!</option>
+                <option value="bird">Shooting Spider</option>
+                <option value="bird" disabled>Janken : Coming soon)</option>
+                <option value="bird" disabled>Smile : Coming soon</option>
+            </select>
+            <div className='w-full h-full cursor-crosshair'>
+                <button
+                    className={`bird p-2 absolute ${
+                        visible ? 'opacity-100' : 'opacity-0'
+                    } cursor-crosshair`}
+                    style={{
+                        top: `${Otop}%`,
+                        left: 0,
+                    }}
+                    onClick={shoot}
+                    >
+                    <FaSpider size={Osize} />
+                </button>
+                <style>{`
+                    .bird {
+                    animation: fly ${Ospeed}s linear infinite alternate;
+                    }
+
+                    @keyframes fly {
+                    from { left: 0; }
+                    to { left: calc(100% - 4rem); }
+                    }
+                `}</style>
+            </div>
+        </div>
+    )
+    }
