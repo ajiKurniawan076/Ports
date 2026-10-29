@@ -3,7 +3,7 @@ import { FaFacebook, FaGoogle, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 export const Footer = () => {
   return (
-    <div className='flex flex-col w-full min-h-56 bg-linear-[135deg,#324e51_50%,#3d676b_50%]  text-amber-100 px-6'>
+    <div className='flex flex-col w-full min-h-56 bg-linear-[135deg,#324e51_50%,#042F2E_50%]  text-amber-100 px-6'>
         <div className='h-[80%] gap-4 grid lg:flex w-full justify-around lg:px-16 lg:py-2'>
             <div className='flex flex-col w-full gap-2'>
                 <span className='font-bold text-xl'>Quick Link</span>

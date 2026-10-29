@@ -5,7 +5,7 @@ export const Navbar = () => {
     const [nav, setNav] = useState('/')
   return (
     <div className='fixed shadow-2xl z-30 top-0 left-0 flex flex-col w-full min-h-16 lg:h-36 opacity-95'>  
-        <div className='h-full flex justify-around place-items-center z-20 text-amber-100 w-full bg-linear-[45deg,#3d676b_50%,#324e51_50%]'>
+        <div className='h-full flex justify-around place-items-center z-20 text-amber-100 w-full bg-linear-[45deg,#042F2E_50%,#324e51_50%]'>
             <div className='flex w-[60%] itens-center justify-center h-full z-20 p-4 gap-2'>
                 <img src="assets/profile.png" alt="" className='rounded-full border-4 w-20 h-20 lg:h-30  lg:w-30 '/>
                 <span className=' flex text-2xl md:text-3xl items-center font-extrabold '>Aji Kurniawan</span>
