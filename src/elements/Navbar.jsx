@@ -15,7 +15,7 @@ export const Navbar = () => {
                 <a href='#service' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:zoom-125 ${nav==='/service'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/service')}}>Skills</a>
                 <a href='#about' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:zoom-125 ${nav==='/about'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/about')}}>About Me</a>
                 <a href='#kontak' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:zoom-125 ${nav==='/contact'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Contact</a>
-                <a href='/games' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:zoom-125 ${nav==='/contact'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Mini Games</a>
+                <a href='/games' className={`flex h-full animate-pulse w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:zoom-125 ${nav==='/games'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Mini Games</a>
             </div>
             <FaBars className='lg:hidden z-20' onClick={()=>{setShow(!show); console.log(show)}}/>
            </div>
@@ -24,7 +24,7 @@ export const Navbar = () => {
                 <a href='#service' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/service'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/service')}}>Skills</a>
                 <a href='#about' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/about'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/about')}}>About Me</a>
                 <a href='#kontak' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/contact'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Contact</a>
-                <a href='/games' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/contact'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Mini Games</a>
+                <a href='/games' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/games'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Mini Games</a>
            </div>
         
     </div>
