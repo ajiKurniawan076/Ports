@@ -1,15 +1,12 @@
 import React, { useRef, useState } from 'react'
-import logo from '../assets/logo.svg'
-import img1 from '../assets/img1.png'
 import img2 from '../assets/code1.jpg'
 import img3 from '../assets/code2.jpg'
-import img4 from '../assets/kapal4.webp'
 import { useNavigate } from 'react-router-dom'
 import { Navbar } from '../elements/Navbar'
 import { Footer } from '../elements/Footer'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel"
-import { FaArrowCircleRight, FaBookOpen, FaFacebook, FaFirstOrder, FaGoogle, FaInstagram, FaMailBulk, FaMapMarkedAlt, FaPeopleCarry, FaPhone, FaServicestack, FaShippingFast, FaSmile, FaUserAlt, FaUserAstronaut, FaUserCheck, FaUserCircle, FaUserTag, FaWhatsapp } from 'react-icons/fa'
+import { FaInstagram, FaMailBulk, FaMapMarkedAlt, FaWhatsapp } from 'react-icons/fa'
 import Typewriter from '../effects/Typewriting'
 
 export const Home = () => {
