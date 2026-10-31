@@ -35,7 +35,7 @@ export const Home = () => {
         <div id='home' className='scroll-mt-15 md:scroll-mt-30 grid w-full h-fit text-white relative'>
           <Carousel autoPlay={true} infiniteLoop={true} showArrows={true} showThumbs={false} showIndicators={false} showStatus={false} interval={3000} className='relative'>
             <div>
-              <img className=' object-cover h-200' src={img2} />
+              <img className=' object-cover h-200' src={img2} loading='eager'/>
 
             </div>
             <div>
