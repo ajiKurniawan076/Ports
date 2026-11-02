@@ -1,5 +1,6 @@
-    import React, { useEffect, useState } from 'react'
-    import { FaSpider } from 'react-icons/fa'
+    import React, { useEffect, useRef, useState } from 'react'
+    import { FaFistRaised, FaHandPeace, FaPeace, FaSpider } from 'react-icons/fa'
+import { FaHand } from 'react-icons/fa6'
 
     export const Games = () => {
         const [score, setScore] = useState(0)
@@ -9,6 +10,28 @@
         const[Oleft, setOleft] = useState(0)
         const[Otop, setOtop] = useState(20)
         const[Ospeed, setOspeed] = useState(3)
+        const [game, setGame] = useState('')
+        const [roll, setRoll] = useState('')
+        const [roll2, setRoll2] = useState('')
+        const gameRef = useRef(null)
+        const suit = (roll, e)=>{
+            e.preventDefault()
+            console.log(roll)
+            const rand = Math.random()*3+1
+            if (rand>1 && rand< 2){
+                setRoll2('paper')
+                if(roll == 'scissor'){setScore((prev)=>prev+1)}
+            }
+            if (rand>2 && rand< 3){
+                setRoll2('rock')
+                if(roll == 'paper'){setScore((prev)=>prev+1)}
+            }
+            if (rand>3 && rand< 4){
+                setRoll2('scissor')
+                if(roll == 'rock'){setScore((prev)=>prev+1)}
+            }
+            setRoll(roll)
+        }
         const shoot = (e) => {
             e.preventDefault()
             if(score<19){
@@ -35,6 +58,18 @@
             
             
         }
+        const pilihgame = (e) => {
+            e.preventDefault()
+            setGame(gameRef.current.value)
+            console.log(gameRef.current.value)
+        }
+
+        useEffect(()=>{
+            setTimeout(()=>{
+                setRoll('')
+                setRoll2('')
+            },2000)
+        },[roll])
     return (
         <div className='w-full h-full p-4 flex flex-col items-center justify-start '>
             <div className='fixed top-0 right-0 p-2 flex'>
@@ -47,13 +82,13 @@
             <p className='text-2xl font-bold'>            
                 GAMES
             </p>
-            <select name="game" id="game" className='p-2 rounded-lg'>
-                <option value="" disabled>Choose your game!</option>
-                <option value="bird">Shooting Spider</option>
-                <option value="bird" disabled>Janken : Coming soon</option>
-                <option value="bird" disabled>Smile : Coming soon</option>
+            <select ref={gameRef} defaultValue={1} onChange={pilihgame} name="game" id="game" className='p-2 rounded-lg'>
+                <option value="1" disabled>Choose your game!</option>
+                <option value="spider" >Shoot The Spider</option>
+                <option value="janken">Janken</option>
+                <option value="2" disabled>Smile : Coming soon</option>
             </select>
-            <div className='w-full h-full cursor-crosshair'>
+            <div className={`w-full h-full cursor-crosshair ${game=='spider'? '' : 'hidden'}`}>
                 <button
                     className={`bird p-2 absolute  ${
                         visible ? 'opacity-100' : 'opacity-0'
@@ -82,6 +117,40 @@
                     to { left: calc(100% - 4rem); }
                     }
                 `}</style>
+            </div>
+                        {/*JANKEN                          !!!!!!!!!!!!!!!!!!!!!*/}
+            <div className={`w-full h-full cursor-crosshair p-10 ${game=='janken'? '' : 'hidden'}`}>
+                <div className=' text-center grid w-full h-full  relative'>
+                    <div className='flex gap-4 absolute right-0 top-0 items-center h-[10%] z-20'>
+                        <button onClick={(e)=>{suit('paper',e)}} className='w-fit h-fit'><FaHand size={40}/></button>
+                        <button onClick={(e)=>{suit('scissor',e)}} className='w-fit h-fit'><FaHandPeace size={40}/></button>
+                        <button onClick={(e)=>{suit('rock',e)}} className='w-fit h-fit'><FaFistRaised size={40}/></button>
+                    </div>
+                    <div className='w-full h-full flex flex-col border-b-2'>
+                        <div className='w-full h-[20%] '>
+                            <h1>YOU</h1>
+                        </div>
+                        <div className='w-full h-[80%]  border-t-2'>
+                            <span className='block w-full h-full relative'>
+                                <FaHand className={`duration-300 absolute top-0 left-0 w-full h-full scale-0  ${roll=='paper'?' scale-100':''}`}/>
+                                <FaFistRaised className={`duration-300 absolute top-0 left-0 w-full h-full scale-0  ${roll=='rock'?' scale-100':''}`}/>
+                                <FaHandPeace className={`duration-300 absolute top-0 left-0 w-full h-full scale-0  ${roll=='scissor'?' scale-100':''}`}/>
+                            </span>
+                        </div>
+                    </div>  
+                    <div className='w-full h-full flex flex-col'>
+                        <div className='w-full h-[80%]  border-t-2'>
+                            <span className='block w-full h-full relative'>
+                                <FaHand className={`duration-300 absolute top-0 left-0 w-full h-full scale-0  ${roll2=='paper'?' scale-100':''}`}/>
+                                <FaFistRaised className={`duration-300 absolute top-0 left-0 w-full h-full scale-0  ${roll2=='rock'?' scale-100':''}`}/>
+                                <FaHandPeace className={`duration-300 absolute top-0 left-0 w-full h-full scale-0  ${roll2=='scissor'?' scale-100':''}`}/>
+                            </span>
+                        </div>
+                        <div className='w-full h-[20%] '>
+                            <h1>OPPONENT</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
