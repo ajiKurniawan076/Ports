@@ -1,5 +1,5 @@
     import React, { useEffect, useRef, useState } from 'react'
-    import { FaFistRaised, FaHandPeace, FaPeace, FaSpider } from 'react-icons/fa'
+    import { FaFistRaised, FaFlushed, FaHandPeace, FaPeace, FaSadCry, FaSmile, FaSpider } from 'react-icons/fa'
 import { FaHand } from 'react-icons/fa6'
 
     export const Games = () => {
@@ -11,6 +11,7 @@ import { FaHand } from 'react-icons/fa6'
         const[Otop, setOtop] = useState(20)
         const[Ospeed, setOspeed] = useState(3)
         const [game, setGame] = useState('')
+        const [status, setStatus] = useState('')
         const [roll, setRoll] = useState('')
         const [roll2, setRoll2] = useState('')
         const gameRef = useRef(null)
@@ -20,15 +21,42 @@ import { FaHand } from 'react-icons/fa6'
             const rand = Math.random()*3+1
             if (rand>1 && rand< 2){
                 setRoll2('paper')
-                if(roll == 'scissor'){setScore((prev)=>prev+1)}
+                if(roll == 'scissor'){
+                    setTimeout(()=>{setStatus('win')},500)
+                    setScore((prev)=>prev+1)}
+                else if(roll == 'rock'){
+                    setTimeout(()=>{setStatus('lose')},500)
+                    setScore((prev)=>prev-1)}
+                else{
+                        setTimeout(()=>{setStatus('draw')},500)
+                    }
+                    
             }
-            if (rand>2 && rand< 3){
+            else if (rand>2 && rand< 3){
                 setRoll2('rock')
-                if(roll == 'paper'){setScore((prev)=>prev+1)}
+                if(roll == 'paper'){
+                    setTimeout(()=>{setStatus('win')},500)
+                    setScore((prev)=>prev+1)}
+                else if(roll == 'scissor'){
+                    setTimeout(()=>{setStatus('lose')},500)
+                    setScore((prev)=>prev-1)}
+                else{
+                        setTimeout(()=>{setStatus('draw')},500)
+                    }
+                    
             }
-            if (rand>3 && rand< 4){
+            else if (rand>3 && rand< 4){
                 setRoll2('scissor')
-                if(roll == 'rock'){setScore((prev)=>prev+1)}
+                if(roll == 'rock'){
+                    setTimeout(()=>{setStatus('win')},500)
+                    setScore((prev)=>prev+1)}
+                else if(roll == 'paper'){
+                    setTimeout(()=>{setStatus('lose')},500)
+                    setScore((prev)=>prev-1)}
+                else{
+                        setTimeout(()=>{setStatus('draw')},500)
+                    }
+                    
             }
             setRoll(roll)
         }
@@ -65,10 +93,14 @@ import { FaHand } from 'react-icons/fa6'
         }
 
         useEffect(()=>{
-            setTimeout(()=>{
+            if (roll !== ''){
+                setTimeout(()=>{
                 setRoll('')
                 setRoll2('')
+                setStatus('')
             },2000)
+            }
+            
         },[roll])
     return (
         <div className='w-full h-full p-4 flex flex-col items-center justify-start '>
@@ -120,7 +152,7 @@ import { FaHand } from 'react-icons/fa6'
             </div>
                         {/*JANKEN                          !!!!!!!!!!!!!!!!!!!!!*/}
             <div className={`w-full h-full cursor-crosshair p-10 ${game=='janken'? '' : 'hidden'}`}>
-                <div className=' text-center grid w-full h-full  relative'>
+                <div className=' text-center grid w-full h-full relative'>
                     <div className='flex gap-4 absolute right-0 top-0 items-center h-[10%] z-20'>
                         <button onClick={(e)=>{suit('paper',e)}} className='w-fit h-fit'><FaHand size={40}/></button>
                         <button onClick={(e)=>{suit('scissor',e)}} className='w-fit h-fit'><FaHandPeace size={40}/></button>
@@ -150,6 +182,15 @@ import { FaHand } from 'react-icons/fa6'
                             <h1>OPPONENT</h1>
                         </div>
                     </div>
+                    <span className='flex items-center w-full h-full justify-center scale-100 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                        <FaSmile className={`w-3/3 h-3/3 opacity-50 text-yellow-500 duration-300 scale-0 ${status=='win'&&'scale-100'}`}/>
+                    </span>
+                    <span className='flex items-center w-full h-full justify-center scale-100 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                        <FaSadCry className={`w-3/3 h-3/3 opacity-50 text-blue-700 duration-300 scale-0 ${status=='lose'&&'scale-100'}`}/>
+                    </span>
+                    <span className='flex items-center w-full h-full justify-center scale-100 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                        <FaFlushed className={`w-3/3 h-3/3 opacity-50 text-green-400 duration-300 scale-0 ${status=='draw'&&'scale-100'}`}/>
+                    </span>
                 </div>
             </div>
         </div>
