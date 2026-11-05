@@ -262,52 +262,6 @@ export const Projects = () => {
                     </div>
 
                 </div>
-                <div id='kontak' className='scroll-mt-15 md:scroll-mt-30 grid lg:flex w-full h-fit text-white font-serif bg-[url("../assets/contact.jpg")] bg-cover bg-center'>
-                    <div className='lg:w-[30%] flex flex-col p-2 bg-teal-950 bg-linear-to-bl from-teal-950 from-50% to-[#324e51] to-50% lg:pt-20'>
-                        <h1 className='lg:text-right text-amber-100'>Contact <span className='lg:hidden'>Me</span></h1>
-                        <div className='h-full rounded-3xl mx-2.5 my-5 grid p-3 text-amber-100'>
-                            <h4>Aji Kurniawan, S.Kom</h4>
-                            <div className='flex items-center gap-8 text-sm sm:text-base p-4 my-4'>
-                                <FaMapMarkedAlt />
-                                <h5>Jalan Kalitaman 74, Salatiga, Jawa Tengah</h5>
-                            </div>
-                            <div className='flex items-center gap-8 text-sm sm:text-base p-4 my-4'>
-                                <FaWhatsapp />
-                                <h5>088 232 943 147</h5>
-                            </div>
-                            <div className='flex items-center gap-8 text-sm sm:text-base p-4 my-4'>
-                                <FaMailBulk />
-                                <h5>ajikurniawan076@gmail.com</h5>
-                            </div>
-                            <a href="https://instagram.com/ajik.oni/" target="_blank" rel="noopener noreferrer" className='flex items-center gap-8 text-sm sm:text-base p-4 my-4'>
-                                <FaInstagram />
-                                <h5>@ajik.oni</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div className='lg:w-[70%] flex flex-col gap-1 p-2 text-teal-950 font-bold bg-teal-950/50'>
-                        <h1 className='text-left text-amber-100 my-18 hidden lg:block'>Me</h1>
-
-                        <form id='pesan' className='scroll-mt-25 md:scroll-mt-30 h-full rounded-3xl mx-2.5 p-6 flex flex-col gap-4'>
-                            <h3 className='text-left text-amber-100'>
-                                Send Me A Massage
-                            </h3>
-                            <input onChange={pesan} ref={nameRef} type="text" className='flex w-full md:w-100 bg-white/60 p-2' placeholder='Name' />
-                            <textarea onChange={pesan} ref={msgRef} rows={5} className='flex w-full md:w-100 bg-white/60 p-2' placeholder='Your Messages' />
-                            <button onClick={kirim} type='submit' className='w-full md:w-100 rounded-2xl bg-white/60 p-2 hover:bg-teal-100/40'>Kirim</button>
-                        </form>
-                        <div className="max-w-full h-80 md:h-105 rounded-xl overflow-hidden shadow-lg opacity-90">
-                            <iframe
-                                title="Lokasi Kantor"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63315.934766326456!2d110.45588561598849!3d-7.326251726501181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a787e692c9c69%3A0xf6a53e23a0c4462c!2sSalatiga%2C%20Salatiga%20City%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1793203169083!5m2!1sen!2sid"
-                                className="w-full h-full border-0"
-                                loading="lazy"
-                                allowFullScreen
-                                referrerPolicy="no-referrer-when-downgrade"
-                            />
-                        </div>
-                    </div>
-                </div>
                 <Footer />
             </section>
         </>
