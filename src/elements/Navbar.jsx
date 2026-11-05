@@ -8,20 +8,22 @@ export const Navbar = () => {
         <div className='h-full flex justify-around place-items-center z-20 text-amber-100 w-full bg-linear-[45deg,#042F2E_50%,#324e51_50%]'>
             <div className='flex w-[60%] itens-center justify-center h-full z-20 p-4 gap-2'>
                 <img src="assets/profile.png" alt="" loading='lazy' className='rounded-full border-2 shadow-xl border-[#324e51] w-20 h-20 lg:h-30  lg:w-30 '/>
-                <span className=' flex text-2xl md:text-3xl items-center font-extrabold '>Aji Kurniawan, S.Kom</span>
+                <span className=' flex text-xl sm:text-2xl md:text-3xl items-center font-extrabold '>Aji Kurniawan, S.Kom</span>
             </div>
-            <div className='lg:grid lg:grid-cols-5 w-[40%]  h-full place-items-center hidden lg:show'>
-                <a href='#home' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:zoom-125 ${nav==='/'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/')}}>Home</a>
-                <a href='#service' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:zoom-125 ${nav==='/service'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/service')}}>Skills</a>
-                <a href='#about' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:zoom-125 ${nav==='/about'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/about')}}>About Me</a>
-                <a href='#kontak' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:zoom-125 ${nav==='/contact'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Contact</a>
-                <a href='/games' className={`flex h-full animate-pulse w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:zoom-125 ${nav==='/games'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Mini Games</a>
+            <div className='lg:grid lg:grid-cols-5 w-[40%]  h-full place-items-center justify-center hidden lg:show'>
+                <a href='/#home' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:scale-125 ${nav==='/'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/')}}>Home</a>
+                <a href='/#service' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:scale-125 ${nav==='/service'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/service')}}>Skills</a>
+                <a href='/projects' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:scale-125 ${nav==='/contact'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/projects')}}>My Porjects</a>
+                <a href='/#about' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:scale-125 ${nav==='/about'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/about')}}>About Me</a>
+                <a href='/#kontak' className={`flex h-full w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:scale-125 ${nav==='/contact'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Contact</a>
+                <a href='/games' className={`flex h-full col-start-3 animate-pulse w-full place-items-center justify-center duration-400 hover:bg-white/20 hover:scale-125 ${nav==='/games'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Mini Games</a>
             </div>
             <FaBars className='lg:hidden z-20' onClick={()=>{setShow(!show); console.log(show)}}/>
            </div>
             <div className={`fixed w-full h-full flex flex-col gap-4 text-amber-100 justify-start items-start  bg-teal-950/70 px-2 lg:hidden ${show? "top-20" :"-top-full"} py-10 z-10 duration-200`}>
                 <a href='#home' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/')}}>Home</a>
                 <a href='#service' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/service'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/service')}}>Skills</a>
+                <a href='/projects' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/service'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/project]')}}>My Projects</a>
                 <a href='#about' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/about'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/about')}}>About Me</a>
                 <a href='#kontak' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/contact'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Contact</a>
                 <a href='/games' className={`flex w-full place-items-center justify-start duration-400 hover:bg-white/20 ${nav==='/games'? 'text-white font-bold' :'font-bold'  }`} onClick={()=>{setNav('/contact')}}>Mini Games</a>

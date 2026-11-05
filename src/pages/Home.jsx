@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import img2 from '../assets/code1.jpg'
 import img3 from '../assets/code2.jpg'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Navbar } from '../elements/Navbar'
 import { Footer } from '../elements/Footer'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -15,6 +15,7 @@ export const Home = () => {
   const msgRef = useRef(null)
   const [name, setName] = useState('')
   const [msg, setMsg] = useState('')
+  const location = useLocation()
   const pesan = (e)=>{
     e.preventDefault()
     setName(nameRef?.current?.value)
@@ -24,9 +25,22 @@ export const Home = () => {
     e.preventDefault()
     window.open(`https://wa.me/6288232943147?text='Hai Aji Saya ${name}. ${msg}`, '_blank', 'noopener,noreferrer')
   }
+
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+        const section = location.hash.replace('#', '');
+
+        setTimeout(() => {
+            document.getElementById(section)?.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }, 100);
+    }
+}, [location]);
+
   return (
     <>
-      <section className='grid place-items-start justify-items-start text-center h-fit bg-white mt-16 md:mt-36'>
+      <section className='grid place-items-start justify-items-start text-center h-fit bg-white mt-16 lg:mt-36'>
         <Navbar />
 
         <div id='home' className='scroll-mt-15 md:scroll-mt-30 grid w-full h-fit text-white relative'>
@@ -123,21 +137,21 @@ export const Home = () => {
         <div id='kontak' className='scroll-mt-15 md:scroll-mt-30 grid lg:flex w-full h-fit text-white font-serif bg-[url("../assets/contact.jpg")] bg-cover bg-center'>
           <div className='lg:w-[30%] flex flex-col p-2 bg-teal-950 bg-linear-to-bl from-teal-950 from-50% to-[#324e51] to-50% lg:pt-20'>
             <h1 className='lg:text-right text-amber-100'>Contact <span className='lg:hidden'>Me</span></h1>
-            <div className='h-full rounded-3xl mx-2.5 my-5 flex flex-col p-3 text-amber-100'>
+            <div className='h-full rounded-3xl mx-2.5 my-5 grid p-3 text-amber-100'>
               <h4>Aji Kurniawan, S.Kom</h4>
-              <div className='flex items-center gap-8 p-4 my-4'>
+              <div className='flex items-center gap-8 text-sm sm:text-base p-4 my-4'>
                 <FaMapMarkedAlt />
                 <h5>Jalan Kalitaman 74, Salatiga, Jawa Tengah</h5>
               </div>
-              <div className='flex items-center gap-8 p-4 my-4'>
+              <div className='flex items-center gap-8 text-sm sm:text-base p-4 my-4'>
                 <FaWhatsapp />
                 <h5>088 232 943 147</h5>
               </div>
-              <div className='flex items-center gap-8 p-4 my-4'>
+              <div className='flex items-center gap-8 text-sm sm:text-base p-4 my-4'>
                 <FaMailBulk />
                 <h5>ajikurniawan076@gmail.com</h5>
               </div>
-              <a href="https://instagram.com/ajik.oni/"   target="_blank" rel="noopener noreferrer" className='flex items-center gap-8 p-4 my-4'>
+              <a href="https://instagram.com/ajik.oni/"   target="_blank" rel="noopener noreferrer" className='flex items-center gap-8 text-sm sm:text-base p-4 my-4'>
                 <FaInstagram />
                 <h5>@ajik.oni</h5>
               </a>

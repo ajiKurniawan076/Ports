@@ -153,10 +153,10 @@ import { FaHand } from 'react-icons/fa6'
                         {/*JANKEN                          !!!!!!!!!!!!!!!!!!!!!*/}
             <div className={`w-full h-full cursor-crosshair p-10 ${game=='janken'? '' : 'hidden'}`}>
                 <div className=' text-center grid w-full h-full relative'>
-                    <div className='flex gap-2 absolute right-0 top-0 items-center h-[10%] z-20'>
-                        <button onClick={(e)=>{suit('paper',e)}} className='w-fit h-fit scale-75 md:scale-100'><FaHand size={40}/></button>
-                        <button onClick={(e)=>{suit('scissor',e)}} className='w-fit h-fit scale-75 md:scale-100'><FaHandPeace size={40}/></button>
-                        <button onClick={(e)=>{suit('rock',e)}} className='w-fit h-fit scale-75 md:scale-100'><FaFistRaised size={40}/></button>
+                    <div className='flex gap-0 md:gap-2 absolute -right-10 md:right-0 top-0 items-center h-[10%] z-20'>
+                        <button onClick={(e)=>{suit('paper',e)}} className='w-fit h-fit scale-50 md:scale-100'><FaHand size={40}/></button>
+                        <button onClick={(e)=>{suit('scissor',e)}} className='w-fit h-fit scale-50 md:scale-100'><FaHandPeace size={40}/></button>
+                        <button onClick={(e)=>{suit('rock',e)}} className='w-fit h-fit scale-50 md:scale-100'><FaFistRaised size={40}/></button>
                     </div>
                     <div className='w-full h-full flex flex-col border-b-2'>
                         <div className='w-full h-[20%] '>
