@@ -169,7 +169,7 @@ export const Projects = () => {
                     <h4 className='text-teal-600'>Finished Projects</h4>
                     <h5 className=' font-normal' >Throughout my development journey, I have worked on various projects involving web and desktop application development. These projects demonstrate my ability to design, develop, and implement functional software solutions, ranging from business management systems to interactive web applications, using technologies and frameworks suited to each project's requirements.</h5>
                     <div className='flex flex-col items-start justify-center w-full'>
-                        <div className="hidden md:flex">
+                        <div className="hidden md:flex justify-self-center">
                             <button onClick={(e)=>{
                                 e.preventDefault()
                                 setIndPro(0)
